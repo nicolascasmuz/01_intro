@@ -1,4 +1,5 @@
 import FitzRoyMountImg from "@/assets/images/monte-fitz-roy.jpg";
+import { Header } from "@/components/Header";
 import { Link } from "expo-router";
 
 import React from "react";
@@ -13,6 +14,7 @@ import {
 const app = () => {
   return (
     <View style={styles.container}>
+      <Header />
       <ImageBackground style={styles.img} source={FitzRoyMountImg}>
         <View style={styles.overlay}>
           <Text style={styles.text}>Hola mundo</Text>
