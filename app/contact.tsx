@@ -6,12 +6,9 @@ import { ExternalLink } from "@/components/ExternalLink";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 
-import { Header } from "@/components/Header";
-
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Header />
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
