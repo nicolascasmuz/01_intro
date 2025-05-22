@@ -30,7 +30,9 @@ export function Form(props: any) {
       >
         {props.children}
       </TextInput>
-      <Button onSubmit={handleSubmit}>{props.text}</Button>
+      <Button goTo="/share-code" /* onSubmit={handleSubmit} */>
+        {props.text}
+      </Button>
     </View>
   );
 }
