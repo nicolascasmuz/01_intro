@@ -11,7 +11,9 @@ export default function MainScreen() {
   return (
     <ImageBackground style={styles.background} source={background}>
       <View style={styles.container}>
-        <MainTitle text="Piedra Papel o Tijera" />
+        <View style={styles.titleContainer}>
+          <MainTitle text="Piedra Papel o Tijera" />
+        </View>
         <View style={styles.buttonContainer}>
           <Button goTo="/sign-in">Nuevo juego</Button>
           <Button goTo="/enter-room">Ingresar a una sala</Button>
@@ -33,10 +35,14 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
   },
+  titleContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   buttonContainer: {
     flex: 1,
     display: "flex",
-    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "center",

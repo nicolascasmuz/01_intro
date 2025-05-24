@@ -11,8 +11,12 @@ export default function EnterRoomScreen() {
   return (
     <ImageBackground style={styles.background} source={background}>
       <View style={styles.container}>
-        <MainTitle text="Piedra Papel o Tijera" />
-        <RoomForm />
+        <View style={styles.titleContainer}>
+          <MainTitle text="Piedra Papel o Tijera" />
+        </View>
+        <View style={styles.formContainer}>
+          <RoomForm />
+        </View>
         <Hands />
       </View>
     </ImageBackground>
@@ -30,5 +34,18 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+  },
+  titleContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  formContainer: {
+    flex: 1,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    alignSelf: "center",
+    gap: 20,
   },
 });
