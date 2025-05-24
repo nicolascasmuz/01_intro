@@ -1,9 +1,9 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
 
-import { Form } from "@/components/Form";
 import { Hands } from "@/components/Hands";
 import { MainTitle } from "@/components/MainTitle";
+import { SignInForm } from "@/components/SignInForm";
 
 import background from "@/assets/images/white-background.png";
 
@@ -12,7 +12,7 @@ export default function SignInScreen() {
     <ImageBackground style={styles.background} source={background}>
       <View style={styles.container}>
         <MainTitle text="Piedra Papel o Tijera" />
-        <Form placeholder="tu nombre" text="Empezar" />
+        <SignInForm />
         <Hands />
       </View>
     </ImageBackground>

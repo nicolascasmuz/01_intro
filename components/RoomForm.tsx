@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Alert, StyleSheet, TextInput, View } from "react-native";
 import { Button } from "./Button";
 
-export function Form(props: any) {
+export function RoomForm(props: any) {
   const [value, setValue] = useState("");
 
   const handleSubmit = () => {
@@ -11,12 +11,7 @@ export function Form(props: any) {
       return;
     }
 
-    if (props.placeholder === "tu nombre") {
-      console.log("name: ", value);
-    }
-    if (props.placeholder === "código") {
-      console.log("code: ", value);
-    }
+    console.log("code: ", value);
 
     setValue("");
   };
@@ -25,14 +20,12 @@ export function Form(props: any) {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder={props.placeholder}
+        placeholder="código"
         onChangeText={setValue}
       >
         {props.children}
       </TextInput>
-      <Button goTo="/share-code" /* onSubmit={handleSubmit} */>
-        {props.text}
-      </Button>
+      <Button goTo="/start" /* onSubmit={handleSubmit} */>Ingresar</Button>
     </View>
   );
 }
